@@ -55,10 +55,9 @@ def listmarks(marks, courses):
             if mark["cid"] == course["id"]:
                 print(f"Student Id: {mark["sid"]}, Name: {mark["sname"]} Mark: {mark["mark"]}")
 
-if __name__ == "__main__":
-    sobj = Student()
-    cobj = Course()
-    mobj = Mark(sobj.students, cobj.courses)
-    liststudents(sobj.students)
-    listcourses(cobj.courses)
-    listmarks(mobj.marks, cobj.courses)
+sobj = Student()
+cobj = Course()
+mobj = Mark(sobj.students, cobj.courses)
+liststudents(sobj.students)
+listcourses(cobj.courses)
+listmarks(mobj.marks, cobj.courses)
